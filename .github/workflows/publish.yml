@@ -28,7 +28,8 @@ jobs:
     steps:
       - uses: actions/checkout@v7
       - uses: pnpm/setup@v3
-          version: 
+        with:
+          version: 12.16.1
 
       - name: install dependencies (ubuntu only)
         if: matrix.platform == 'ubuntu-22.04' || matrix.platform == 'ubuntu-22.04-arm' # This must match the platform value defined above.
